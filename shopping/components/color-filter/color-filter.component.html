@@ -1,0 +1,15 @@
+<div class="con">
+  <div class="filter"><h2>Color:</h2></div>
+  <div *ngFor="let option of options" id="colors">
+    <div class="container">
+      <label>
+        <input type="checkbox"
+               name="options"
+               value="{{option.value}}"
+               [(ngModel)]="option.checked"/>
+        <span class="checkmark"></span>{{option.name}}
+      </label>
+    </div>
+  </div>
+  <p style="display:none;">{{selectedOptions}}</p>
+</div>
